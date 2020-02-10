@@ -4,7 +4,7 @@ and follow instructions.
 
 #Exercises:
 
-##1. Sum of pairs:
+##Sum of pairs:
 Given an array of size n, find the unique pairs of elements whose sum will be equal to given value K. An element can occur in only one pair. Print “None” if there is no pair whose sum is equal to K.
 
 ###Samples:
@@ -21,7 +21,7 @@ Given an array of size n, find the unique pairs of elements whose sum will be eq
     - Enter array elements: 3, 4, 7, 5, 7, 23
     - Pairs whose sum is K: (3, 7)
 
-##2. Equilibrium Position:
+##Equilibrium Position:
 Given an array of N elements, find the equilibrium position of the array. Equilibrium position in an array is the index of the element in the array such that the sum of elements before it is equal to the sum of elements after it. If there is no equilibrium position, print -1
 
 ###Samples:
@@ -35,7 +35,7 @@ Given an array of N elements, find the equilibrium position of the array. Equili
     - Enter elements: 15, 10, 5, 4, 2, 1, 3
     - Equilibrium position: 1
 
-##3. Special Substring:
+##Special Substring:
 A string is said to be a special string if either of two conditions is met:
 1. All of the characters are the same, e.g. aaa.
 2. All characters except the middle one are the same, e.g. aadaa.
