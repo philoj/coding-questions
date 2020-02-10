@@ -2,12 +2,12 @@ Run the script by:
 `(venv)$ python cli_script.py`
 and follow instructions.
 
-#Exercises:
+# Exercises:
 
-##Sum of pairs:
+## Sum of pairs:
 Given an array of size n, find the unique pairs of elements whose sum will be equal to given value K. An element can occur in only one pair. Print “None” if there is no pair whose sum is equal to K.
 
-###Samples:
+### Samples:
 1. 
     - Enter target sum, K: 10
     - Enter array elements: 3, 1, 7, 9, 8
@@ -21,10 +21,10 @@ Given an array of size n, find the unique pairs of elements whose sum will be eq
     - Enter array elements: 3, 4, 7, 5, 7, 23
     - Pairs whose sum is K: (3, 7)
 
-##Equilibrium Position:
+## Equilibrium Position:
 Given an array of N elements, find the equilibrium position of the array. Equilibrium position in an array is the index of the element in the array such that the sum of elements before it is equal to the sum of elements after it. If there is no equilibrium position, print -1
 
-###Samples:
+### Samples:
 1.
     - Enter elements: 4, 5, 1, 8 
     - Equilibrium position: -1
@@ -35,13 +35,13 @@ Given an array of N elements, find the equilibrium position of the array. Equili
     - Enter elements: 15, 10, 5, 4, 2, 1, 3
     - Equilibrium position: 1
 
-##Special Substring:
+## Special Substring:
 A string is said to be a special string if either of two conditions is met:
 1. All of the characters are the same, e.g. aaa.
 2. All characters except the middle one are the same, e.g. aadaa.
 A special substring is any substring of a string which meets one of those criteria. Given a string, determine how many special substrings can be formed from it.
 
-###Samples:
+### Samples:
 1.
     - Enter the string: asasd
     - Count of special substrings: 5
