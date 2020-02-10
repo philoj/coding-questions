@@ -28,7 +28,8 @@ cli_questions = [
         'type': 'input',
         'name': 'sum',
         'message': 'Enter target sum, K:',
-        'validate': lambda val: validate_integer(val) or 'Please enter integers only.'
+        'validate': lambda val: validate_integer(val) or 'Please enter integers only.',
+        'filter': int,
     },
     {
         'when': lambda ans: ans['question'] in {SUM_OF_PAIRS, EQUILIBRIUM_POSITION},
@@ -37,7 +38,8 @@ cli_questions = [
         'message': 'Enter the array of integers separated by comma:',
         'validate': lambda val: not any(
             not validate_integer(v) for v in val.strip(',').split(',')
-        ) or 'Please enter integers only.'
+        ) or 'Please enter integers only.',
+        'filter': lambda val: [int(v) for v in val.strip(',').split(',')]
     },
     {
         'when': lambda ans: ans['question'] == SPECIAL_SUBSTRING,
@@ -49,21 +51,17 @@ cli_questions = [
 
 if __name__ == '__main__':
     answers = prompt(cli_questions)
-    if 'sum' in answers:
-        answers['sum'] = int(answers['sum'])
-    if 'elements' in answers:
-        answers['elements'] = [int(val) for val in answers['elements'].strip(',').split(',')]
+
     if answers['question'] == SUM_OF_PAIRS:
         pairs = sum_of_pairs(answers['sum'], answers['elements'])
         print('Unique pairs: ', end='')
         print(' '.join(f"({pair[0]}, {pair[1]})" for pair in pairs) if pairs else None)
-
     elif answers['question'] == EQUILIBRIUM_POSITION:
         print(f"Equilibrium position: {equilibrium_position(answers['elements'])}")
     elif answers['question'] == SPECIAL_SUBSTRING:
         matches = special_substring(answers['full_string'])
         if matches:
-            print('Matching special substrings: ', end='')
+            print(f"Count of special substrings: {len(matches)}")
             print(', '.join(f"'{sub}'" for sub in matches))
         else:
             print('No matching special substrings.')
