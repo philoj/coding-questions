@@ -9,16 +9,13 @@ def DoWork(n, input):
 
 # DO NOT remove/modify the below line
 # PLCHLDR_TSTCASES#
-ERROR_CLASSES_TO_SUPPRESS = set()
 
 
 def run_single_test_case(method, kwargs, actual_result, failure_message, success_message):
     try:
         result = method(**kwargs)
     except Exception as e:
-        print(f"\t\t <fail>{failure_message}</fail>")
-        if type(e) not in ERROR_CLASSES_TO_SUPPRESS:
-            raise
+        print(f"\t\t <fail>Exception raised during execution {type(e).__name__}: {e.__str__()}</fail>")
     else:
         if result != actual_result:
             print(f"\t\t <fail>{failure_message}</fail>")
