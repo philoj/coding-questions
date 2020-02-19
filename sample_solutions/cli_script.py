@@ -1,11 +1,9 @@
 from PyInquirer import prompt
-from prompt_toolkit.styles import style_from_dict
-from pygments.token import Token
 
-from equilibrium_position import equilibrium_position
-from input_validation import validate_integer
-from special_substring import special_substring
-from sum_of_pairs import sum_of_pairs
+from sample_solutions.solutions.equilibrium_position import equilibrium_position
+from sample_solutions.input_validation import validate_integer
+from sample_solutions.solutions.special_substring import special_substring
+from sample_solutions.solutions.sum_of_pairs import sum_of_pairs
 
 SUM_OF_PAIRS = 'Sum of pairs'
 EQUILIBRIUM_POSITION = 'Equilibrium Position'
