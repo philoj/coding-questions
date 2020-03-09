@@ -42,14 +42,14 @@ def run_single_test_case(method, kwargs, actual_result, success_message):
     else:
         # In order to make sure pair order doesn't affect the answer,
         # the pairs are sorted before checking for inclusion, so that (3,7) and (7,3) are treated the same.
-        result_copy = [sorted(pair) for pair in result]
-        actual_result = [sorted(pair) for pair in actual_result]
+        result = [tuple(sorted(pair)) for pair in result]
+        actual_result = [tuple(sorted(pair)) for pair in actual_result]
         actual_result_copy = actual_result.copy()
 
         for pair in actual_result:
-            if pair in result_copy:
+            if pair in result:
                 # pair has been found. Clear from both lists.
-                result_copy.remove(pair)
+                result.remove(pair)
                 actual_result_copy.remove(pair)
             else:
                 # failed to find a pair
@@ -57,7 +57,7 @@ def run_single_test_case(method, kwargs, actual_result, success_message):
                 return
 
         # result_copy must be empty by now
-        if result_copy:
+        if result:
             # this means invalid pairs are present in the result
             print(f"\t\t <fail>Invalid pairs are found in the result.</fail>")
 
