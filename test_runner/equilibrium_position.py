@@ -1,10 +1,26 @@
+"""
+Problem 2: Equilibrium Position
+
+Given an array of N elements, find the equilibrium position of the array.
+Equilibrium position in an array is the index of the element in the array such that
+the sum of elements before it is equal to the sum of elements after it.
+If there is no equilibrium position, print -1
+"""
+
+
 # Write your code inside this function.
 # DO NOT modify the method signature
 # DO NOT modify/remove any system generated code/comments
 
 
 def DoWork(n, input):
-    return "Hello " + input
+    # n is the number of elements, an integer
+    # input is the list of integers.
+    # Expected return value is the index of the equilibrium position
+    # or -1 if there is no equilibrium position
+
+    # for the given example [1, 2, 3, 4, 5, 6, 7], there is no equilibrium position
+    return -1
 
 
 # DO NOT remove/modify the below line
